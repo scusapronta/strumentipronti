@@ -5,7 +5,6 @@ const result = document.getElementById("result");
 const faces = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
 
 function rollDice() {
-  // Animazione realistica tipo “shake”
   dice.classList.add("rolling");
 
   setTimeout(() => {
@@ -13,7 +12,7 @@ function rollDice() {
     dice.textContent = faces[roll];
     result.textContent = `Hai ottenuto: ${roll + 1}`;
     dice.classList.remove("rolling");
-  }, 600);
+  }, 900); // durata animazione realistica
 }
 
 rollBtn.addEventListener("click", rollDice);
