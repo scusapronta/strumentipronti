@@ -1,1 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #d7d9df, #bfc3cc);
+  margin: 0;
+  padding: 0;
+  color: #222;
+  text-align: center;
+}
+
+.header {
+  padding: 20px 10px 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+.coin-box {
+  background: #f7f8fa;
+  padding: 30px 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
+  width: 100%;
+  border: 1px solid #dcdfe3;
+}
+
+.coin {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  transform-style: preserve-3d;
+}
+
+.result {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #2ed573;
+  color: #1b1b1b;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #3ae27f;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 0.85rem;
+}
+
+.footer a {
+  color: #222;
+  text-decoration: none;
+}
+
+/* Animazione flip moneta */
+.flipping {
+  animation: flipCoin 0.9s cubic-bezier(.26,.53,.74,1.48);
+}
+
+@keyframes flipCoin {
+  0%   { transform: rotateX(0deg) scale(1); }
+  25%  { transform: rotateX(180deg) scale(1.1); }
+  50%  { transform: rotateX(360deg) scale(1.05); }
+  75%  { transform: rotateX(540deg) scale(1.1); }
+  100% { transform: rotateX(720deg) scale(1); }
+}
 
