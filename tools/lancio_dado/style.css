@@ -65,3 +65,9 @@ body {
   80%  { transform: rotate(480deg) scale(1.05); }
   100% { transform: rotate(600deg) scale(1); }
 }
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
