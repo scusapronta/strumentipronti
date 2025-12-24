@@ -4,27 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lancio Dado - StrumentiPronti</title>
-  <meta name="description" content="Lancia un dado virtuale con animazione realistica.">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="header">
-    <h1>Lancio Dado</h1>
-  </header>
+<header class="header">
+  <h1>Lancio Dado</h1>
+</header>
 
-  <main class="main">
-    <div class="dice-box">
-      <div id="dice" class="dice">2</div>
-      <p id="result" class="result">Premi il pulsante per lanciare</p>
-      <button id="rollBtn" class="btn">Lancia il dado</button>
+<main class="main">
+  <div class="dice-box">
+
+    <!-- DADO SVG INLINE (faccia iniziale: 1) -->
+    <div id="dice" class="dice">
+      <svg id="face" width="100" height="100" viewBox="0 0 100 100">
+        <rect x="5" y="5" width="90" height="90" rx="12" fill="#fafafa" stroke="#444" stroke-width="3"/>
+        <circle cx="50" cy="50" r="8" fill="#000"/>
+      </svg>
     </div>
-  </main>
 
-  <footer class="footer">
-    <a href="../../index.html">← Torna alla homepage</a>
-  </footer>
+    <p id="result" class="result">Premi il pulsante per lanciare</p>
+    <button id="rollBtn" class="btn">Lancia il dado</button>
 
-  <script src="script.js"></script>
+  </div>
+</main>
+
+<footer class="footer">
+  <a href="../../index.html">← Torna alla homepage</a>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
