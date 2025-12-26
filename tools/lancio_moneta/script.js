@@ -1,33 +1,33 @@
-const flipBtn = document.getElementById("flipBtn");
-const coin = document.getElementById("coin");
-const front = document.getElementById("coin-front");
-const back = document.getElementById("coin-back");
-const result = document.getElementById("result");
+document.addEventListener("DOMContentLoaded", () => {
+  const flipBtn = document.getElementById("flipBtn");
+  const coin = document.getElementById("coin");
+  const front = document.getElementById("coin-front");
+  const back = document.getElementById("coin-back");
+  const result = document.getElementById("result");
 
-function flipCoin() {
-  if (coin.classList.contains("flipping")) return;
+  function flipCoin() {
+    if (coin.classList.contains("flipping")) return;
 
-  coin.classList.add("flipping");
+    coin.classList.add("flipping");
 
-  const isTesta = Math.random() < 0.5;
+    const isTesta = Math.random() < 0.5;
 
-  // Cambio faccia a metà animazione
-  setTimeout(() => {
-    if (isTesta) {
-      front.style.transform = "rotateY(0deg)";
-      back.style.transform = "rotateY(180deg)";
-      result.textContent = "È uscito: Testa";
-    } else {
-      front.style.transform = "rotateY(180deg)";
-      back.style.transform = "rotateY(0deg)";
-      result.textContent = "È uscito: Croce";
-    }
-  }, 600);
+    setTimeout(() => {
+      if (isTesta) {
+        front.style.transform = "rotateY(0deg)";
+        back.style.transform = "rotateY(180deg)";
+        result.textContent = "È uscito: Testa";
+      } else {
+        front.style.transform = "rotateY(180deg)";
+        back.style.transform = "rotateY(0deg)";
+        result.textContent = "È uscito: Croce";
+      }
+    }, 600);
 
-  // Fine animazione
-  setTimeout(() => {
-    coin.classList.remove("flipping");
-  }, 1200);
-}
+    setTimeout(() => {
+      coin.classList.remove("flipping");
+    }, 1200);
+  }
 
-flipBtn.addEventListener("click", flipCoin);
+  flipBtn.addEventListener("click", flipCoin);
+});
