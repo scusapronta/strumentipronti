@@ -1,68 +1,88 @@
-<div id="coin" class="coin">
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lancio Moneta - StrumentiPronti</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <!-- FRONTE (TESTA) -->
-  <svg id="coin-front" class="face front" width="140" height="140" viewBox="0 0 140 140">
-    <defs>
-      <!-- Oro realistico -->
-      <radialGradient id="goldFront" cx="50%" cy="50%" r="60%">
-        <stop offset="0%" stop-color="#fff7c2"/>
-        <stop offset="40%" stop-color="#f2d675"/>
-        <stop offset="100%" stop-color="#c9a33a"/>
-      </radialGradient>
+<header class="header">
+  <h1>Lancio Moneta</h1>
+  <p class="subtitle">Per quando “testa o croce” è già una strategia.</p>
+</header>
 
-      <!-- Ombra interna -->
-      <radialGradient id="innerShadowFront" cx="50%" cy="50%" r="70%">
-        <stop offset="60%" stop-color="rgba(0,0,0,0)"/>
-        <stop offset="100%" stop-color="rgba(0,0,0,0.25)"/>
-      </radialGradient>
-    </defs>
+<main class="main">
+  <div class="coin-box">
 
-    <!-- Corpo moneta -->
-    <circle cx="70" cy="70" r="60" fill="url(#goldFront)" stroke="#8a6b1f" stroke-width="4"/>
+    <div id="coin" class="coin">
 
-    <!-- Ombra interna -->
-    <circle cx="70" cy="70" r="58" fill="url(#innerShadowFront)"/>
+      <!-- FRONTE (TESTA) -->
+      <svg id="coin-front" class="face front" width="140" height="140" viewBox="0 0 140 140">
+        <defs>
+          <radialGradient id="goldFront" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="#fff7c2"/>
+            <stop offset="40%" stop-color="#f2d675"/>
+            <stop offset="100%" stop-color="#c9a33a"/>
+          </radialGradient>
 
-    <!-- Profilo TESTA stilizzato -->
-    <path d="M70 40
-             C55 40 45 52 45 65
-             C45 80 55 92 70 92
-             C85 92 95 80 95 65
-             C95 52 85 40 70 40
-             Z"
-          fill="rgba(0,0,0,0.25)"/>
+          <radialGradient id="innerShadowFront" cx="50%" cy="50%" r="70%">
+            <stop offset="60%" stop-color="rgba(0,0,0,0)"/>
+            <stop offset="100%" stop-color="rgba(0,0,0,0.25)"/>
+          </radialGradient>
+        </defs>
 
-  </svg>
+        <circle cx="70" cy="70" r="60" fill="url(#goldFront)" stroke="#8a6b1f" stroke-width="4"/>
+        <circle cx="70" cy="70" r="58" fill="url(#innerShadowFront)"/>
 
-  <!-- RETRO (CORONA) -->
-  <svg id="coin-back" class="face back" width="140" height="140" viewBox="0 0 140 140">
-    <defs>
-      <radialGradient id="goldBack" cx="50%" cy="50%" r="60%">
-        <stop offset="0%" stop-color="#fff7c2"/>
-        <stop offset="40%" stop-color="#f2d675"/>
-        <stop offset="100%" stop-color="#c9a33a"/>
-      </radialGradient>
+        <path d="M70 40
+                 C55 40 45 52 45 65
+                 C45 80 55 92 70 92
+                 C85 92 95 80 95 65
+                 C95 52 85 40 70 40
+                 Z"
+              fill="rgba(0,0,0,0.25)"/>
+      </svg>
 
-      <radialGradient id="innerShadowBack" cx="50%" cy="50%" r="70%">
-        <stop offset="60%" stop-color="rgba(0,0,0,0)"/>
-        <stop offset="100%" stop-color="rgba(0,0,0,0.25)"/>
-      </radialGradient>
-    </defs>
+      <!-- RETRO (CORONA) -->
+      <svg id="coin-back" class="face back" width="140" height="140" viewBox="0 0 140 140">
+        <defs>
+          <radialGradient id="goldBack" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="#fff7c2"/>
+            <stop offset="40%" stop-color="#f2d675"/>
+            <stop offset="100%" stop-color="#c9a33a"/>
+          </radialGradient>
 
-    <!-- Corpo moneta -->
-    <circle cx="70" cy="70" r="60" fill="url(#goldBack)" stroke="#8a6b1f" stroke-width="4"/>
+          <radialGradient id="innerShadowBack" cx="50%" cy="50%" r="70%">
+            <stop offset="60%" stop-color="rgba(0,0,0,0)"/>
+            <stop offset="100%" stop-color="rgba(0,0,0,0.25)"/>
+          </radialGradient>
+        </defs>
 
-    <!-- Ombra interna -->
-    <circle cx="70" cy="70" r="58" fill="url(#innerShadowBack)"/>
+        <circle cx="70" cy="70" r="60" fill="url(#goldBack)" stroke="#8a6b1f" stroke-width="4"/>
+        <circle cx="70" cy="70" r="58" fill="url(#innerShadowBack)"/>
 
-    <!-- Corona d’alloro -->
-    <path d="M50 50
-             C40 65 40 75 50 90
-             M90 50
-             C100 65 100 75 90 90"
-          stroke="rgba(0,0,0,0.3)" stroke-width="5" fill="none"
-          stroke-linecap="round"/>
+        <path d="M50 50
+                 C40 65 40 75 50 90
+                 M90 50
+                 C100 65 100 75 90 90"
+              stroke="rgba(0,0,0,0.3)" stroke-width="5" fill="none"
+              stroke-linecap="round"/>
+      </svg>
 
-  </svg>
+    </div>
 
-</div>
+    <p id="result" class="result">Premi il pulsante per lanciare</p>
+    <button id="flipBtn" class="btn">Lancia la moneta</button>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <a href="../../index.html">← Torna alla homepage</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
