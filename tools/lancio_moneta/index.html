@@ -18,94 +18,123 @@
 
     <div id="coin" class="coin">
 
-      <!-- FRONTE — TESTA REALISTICA PREMIUM -->
+      <!-- FRONTE — MONETA NEUTRA PREMIUM -->
       <svg id="coin-front" class="face front" width="140" height="140" viewBox="0 0 140 140">
         <defs>
-
-          <!-- Oro premium multilivello -->
-          <radialGradient id="goldFront" cx="50%" cy="50%" r="65%">
-            <stop offset="0%" stop-color="#fff9d9"/>
+          <!-- Oro realistico multilivello -->
+          <radialGradient id="goldFront" cx="30%" cy="20%" r="80%">
+            <stop offset="0%" stop-color="#fffdf0"/>
             <stop offset="35%" stop-color="#f4d98a"/>
             <stop offset="70%" stop-color="#d1a84a"/>
-            <stop offset="100%" stop-color="#b3872f"/>
+            <stop offset="100%" stop-color="#8b6425"/>
           </radialGradient>
 
-          <!-- Ombra interna morbida -->
-          <radialGradient id="innerShadowFront" cx="50%" cy="50%" r="75%">
+          <!-- Ombra interna -->
+          <radialGradient id="innerShadowFront" cx="50%" cy="55%" r="80%">
             <stop offset="60%" stop-color="rgba(0,0,0,0)"/>
-            <stop offset="100%" stop-color="rgba(0,0,0,0.28)"/>
+            <stop offset="100%" stop-color="rgba(0,0,0,0.35)"/>
           </radialGradient>
 
+          <!-- Highlight centrale -->
+          <radialGradient id="centerHighlightFront" cx="40%" cy="30%" r="50%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.9)"/>
+            <stop offset="40%" stop-color="rgba(255,255,255,0.0)"/>
+            <stop offset="100%" stop-color="rgba(255,255,255,0.0)"/>
+          </radialGradient>
         </defs>
 
         <!-- Corpo moneta -->
-        <circle cx="70" cy="70" r="60" fill="url(#goldFront)" stroke="#8a6b1f" stroke-width="4"/>
-        <circle cx="70" cy="70" r="58" fill="url(#innerShadowFront)"/>
+        <circle cx="70" cy="70" r="60" fill="url(#goldFront)" stroke="#6f4c18" stroke-width="3"/>
 
-        <!-- Bordo inciso premium -->
-        <circle cx="70" cy="70" r="60"
-          stroke="rgba(255,255,255,0.25)"
+        <!-- Anello esterno leggermente incassato -->
+        <circle cx="70" cy="70" r="52"
+          fill="none"
+          stroke="rgba(0,0,0,0.35)"
+          stroke-width="2"/>
+
+        <!-- Ombra interna -->
+        <circle cx="70" cy="70" r="56" fill="url(#innerShadowFront)"/>
+
+        <!-- Highlight centrale -->
+        <circle cx="60" cy="55" r="26" fill="url(#centerHighlightFront)"/>
+
+        <!-- Rilievo centrale: cifra 1 incisa -->
+        <text x="50%" y="50%"
+          text-anchor="middle"
+          dominant-baseline="central"
+          font-size="40"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          fill="rgba(0,0,0,0.45)"
+          style="font-weight: 600;">
+          1
+        </text>
+
+        <!-- Micro incisioni radiali -->
+        <circle cx="70" cy="70" r="44"
+          stroke="rgba(255,255,255,0.35)"
           stroke-width="1"
-          stroke-dasharray="2 4"
+          stroke-dasharray="1 5"
           fill="none"/>
-
-        <!-- Testa realistica premium -->
-        <path d="
-          M70 35
-          C55 35 45 50 45 65
-          C45 78 52 88 62 92
-          C63 96 63 102 60 108
-          C68 106 75 100 78 92
-          C90 88 97 78 97 65
-          C97 50 85 35 70 35
-          Z"
-          fill="rgba(0,0,0,0.32)"/>
       </svg>
 
-      <!-- RETRO — CORONA PREMIUM COMPLETA -->
+      <!-- RETRO — MONETA NEUTRA PREMIUM (SIMBOLO) -->
       <svg id="coin-back" class="face back" width="140" height="140" viewBox="0 0 140 140">
         <defs>
-
-          <!-- Oro premium multilivello -->
-          <radialGradient id="goldBack" cx="50%" cy="50%" r="65%">
-            <stop offset="0%" stop-color="#fff9d9"/>
+          <radialGradient id="goldBack" cx="30%" cy="20%" r="80%">
+            <stop offset="0%" stop-color="#fffdf0"/>
             <stop offset="35%" stop-color="#f4d98a"/>
             <stop offset="70%" stop-color="#d1a84a"/>
-            <stop offset="100%" stop-color="#b3872f"/>
+            <stop offset="100%" stop-color="#8b6425"/>
           </radialGradient>
 
-          <!-- Ombra interna morbida -->
-          <radialGradient id="innerShadowBack" cx="50%" cy="50%" r="75%">
+          <radialGradient id="innerShadowBack" cx="50%" cy="55%" r="80%">
             <stop offset="60%" stop-color="rgba(0,0,0,0)"/>
-            <stop offset="100%" stop-color="rgba(0,0,0,0.28)"/>
+            <stop offset="100%" stop-color="rgba(0,0,0,0.35)"/>
           </radialGradient>
 
+          <radialGradient id="centerHighlightBack" cx="40%" cy="30%" r="50%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.9)"/>
+            <stop offset="40%" stop-color="rgba(255,255,255,0.0)"/>
+            <stop offset="100%" stop-color="rgba(255,255,255,0.0)"/>
+          </radialGradient>
         </defs>
 
         <!-- Corpo moneta -->
-        <circle cx="70" cy="70" r="60" fill="url(#goldBack)" stroke="#8a6b1f" stroke-width="4"/>
-        <circle cx="70" cy="70" r="58" fill="url(#innerShadowBack)"/>
+        <circle cx="70" cy="70" r="60" fill="url(#goldBack)" stroke="#6f4c18" stroke-width="3"/>
 
-        <!-- Bordo inciso premium -->
-        <circle cx="70" cy="70" r="60"
-          stroke="rgba(255,255,255,0.25)"
-          stroke-width="1"
-          stroke-dasharray="2 4"
-          fill="none"/>
-
-        <!-- Corona d’alloro premium -->
-        <path d="
-          M70 38
-          C52 45 40 60 40 75
-          C40 90 52 105 70 112
-          C88 105 100 90 100 75
-          C100 60 88 45 70 38
-          Z"
-          stroke="rgba(0,0,0,0.35)"
-          stroke-width="5"
+        <!-- Anello esterno -->
+        <circle cx="70" cy="70" r="52"
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"/>
+          stroke="rgba(0,0,0,0.35)"
+          stroke-width="2"/>
+
+        <!-- Ombra interna -->
+        <circle cx="70" cy="70" r="56" fill="url(#innerShadowBack)"/>
+
+        <!-- Highlight centrale -->
+        <circle cx="60" cy="55" r="26" fill="url(#centerHighlightBack)"/>
+
+        <!-- Simbolo centrale: stella premium -->
+        <path d="
+          M70 42
+          L76 58
+          L93 58
+          L79 68
+          L84 84
+          L70 74
+          L56 84
+          L61 68
+          L47 58
+          L64 58
+          Z"
+          fill="rgba(0,0,0,0.45)"/>
+
+        <!-- Micro incisioni radiali -->
+        <circle cx="70" cy="70" r="44"
+          stroke="rgba(255,255,255,0.35)"
+          stroke-width="1"
+          stroke-dasharray="1 5"
+          fill="none"/>
       </svg>
 
     </div>
@@ -123,4 +152,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
