@@ -40,3 +40,32 @@ function flipCoin() {
 
 flipBtn.addEventListener("click", flipCoin);
 
+const flipBtn = document.getElementById("flipBtn");
+const coin = document.getElementById("coin");
+const front = document.getElementById("coin-front");
+const back = document.getElementById("coin-back");
+const result = document.getElementById("result");
+
+function flipCoin() {
+  coin.classList.add("flipping");
+
+  const isTesta = Math.random() < 0.5;
+
+  setTimeout(() => {
+    if (isTesta) {
+      front.style.transform = "rotateY(0deg)";
+      back.style.transform = "rotateY(180deg)";
+      result.textContent = "È uscito: Testa";
+    } else {
+      front.style.transform = "rotateY(180deg)";
+      back.style.transform = "rotateY(0deg)";
+      result.textContent = "È uscito: Croce";
+    }
+  }, 600);
+
+  setTimeout(() => {
+    coin.classList.remove("flipping");
+  }, 1200);
+}
+
+flipBtn.addEventListener("click", flipCoin);
